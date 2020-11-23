@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao
+        nhiêu số nguyên lớn hơn hoặc bằng 10</title>
+</head>
+
+<body>
+    <input type="number" id="inputValue">
+    <button id="add" onclick="addValueToArray()">Add</button>
+    <button id="show" onclick=" disPlayValue()">Show</button>
+    <p>
+        <span id="showELement"></span>
+        <span id="showGreaterThan10"></span>
+        <span id="sum"></span>
+        <span id="avg"></span>
+        <span id="max"></span>
+    </p>
+    <script>
+        let arr = [];
+        let x = 0;
+       
+        function addValueToArray() {
+            if (document.getElementById("inputValue").value !== "" && isNaN(document.getElementById("inputValue").value) == false) {
+                arr[x] = +document.getElementById("inputValue").value;
+                x++;
+            }else {
+                document.getElementById("inputValue").value = "";
+            }
+            console.log(arr);
+        }
+        function disPlayValue(){
+            let sum=0;
+            let avg = 0;
+            let e = "<hr/>";
+            let a1 = "<b>1.Number > 10 :</b>";
+            let max = arr[0];
+            let maxResult ="";
+            for(let i =0 ; i<arr.length; i++){
+                
+               e += `Element ${i} Có index là ${arr[i]} <br>`;
+                if(arr[i]>=10){
+                    a1 += `Số lớn hơn 10 là : ${arr[i]}`;
+                  
+                }
+                sum+= arr[i];
+            
+            }
+            for(let k =0 ; k<arr.length;k++){
+                if(arr[k] >max){
+                    max = arr[k];
+                  
+                }
+                maxResult += `Số lớn nhất là ${max}`;
+            }
+            avg = sum/arr.length;
+            document.getElementById("showELement").innerHTML = e ;
+            document.getElementById("sum").innerHTML = `Tổng là : ${sum}`;
+            document.getElementById("avg").innerHTML = `Trung bình là ${avg}`;
+            document.getElementById("max").innerHTML = maxResult;
+        }
+    </script>   
+</body>
+
+</html>

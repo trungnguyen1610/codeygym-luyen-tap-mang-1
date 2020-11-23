@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dem so nguyen am</title>
+</head>
+
+<body>
+    <script>
+        function countMinusNumbers(arr) {
+
+            let count = 0;
+            for (i = 0; i < arr.length; i++) {
+                if (Number.isInteger(arr[i]) && arr[i]<0) {
+                    count++;
+                }
+               
+            }
+            return count;
+
+
+        }
+        console.log(countMinusNumbers([-2,-3.1,4,-5]));
+    </script>
+</body>
+
+</html>

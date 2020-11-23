@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự
+        giảm dần và hiển thị ra mảng đã được sắp xếp.</title>
+</head>
+
+<body>
+    <script>
+        function range(n, arr) {
+
+            for (i = 0; i < n; i++) {
+                //vòng lặp sẽ duyệt từ 0 
+                for (j = i + 1; j < n; j++) {
+                   //vòng lặp sẽ duyệt từ 1 để so sánh với vòng lặp arr[0]
+                   //ví dụ nếu arr[i] > arr[j] thì thực hiện hoán đổi vị trí của 2 số đầu tiên là arr[0] ? arr[1] rồi arr[0] so với arr[2]... tiếp rồi đến  arr[1] so với arr[2] rồi cứ thế đến khi tìm được số nhỏ nhất;
+                    if (arr[i] > arr[j]) {
+                        
+                        let temp = arr[i]
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            console.log(arr)
+        }
+        range(10, [5, 3, 4, -1, -5,-5,-3,-4,-5,-6]);
+    </script>
+</body>
+
+</html>

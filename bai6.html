@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".</title>
+</head>
+<body>
+    <script>
+      
+        function addingArray(){
+            let arr= [];
+            let arrItem ;
+            for(i=0; i<10;i++){
+                arrItem = +prompt("Nhập vào giá trị cần thêm array thứ:" + i);
+                arr.push(arrItem);
+                if(Number.isInteger(arrItem)){
+                    console.log( ` ${arrItem} là mảng số nguyên`)
+                }else{
+                    console.log( ` ${arrItem} không là mảng số nguyên`)
+
+                }
+            }
+            return arr;
+           
+        }
+        addingArray();
+        console.log( addingArray())
+      
+    </script>
+</body>
+</html>
